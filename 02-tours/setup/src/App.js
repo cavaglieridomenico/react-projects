@@ -5,7 +5,22 @@ import Tours from './Tours'
 // I SWITCHED TO PERMANENT DOMAIN
 const url = 'https://course-api.com/react-tours-project'
 function App() {
-  return <h2>Tours Project Setup</h2>
+  const fetchTours = async () => {
+    setLoading(true);
+    try {
+      const fetchResponse = await fetch(url);
+      if (fetchResponse.ok) {
+        const fetchData = await fetchResponse.json();
+        setLoading(false);
+        setTours(fetchData);
+      } else {
+        throw new Error('Errore!');
+      }
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
+  };
 }
 
 export default App
