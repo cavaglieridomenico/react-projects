@@ -20,5 +20,3 @@ const List = ({ peaple }) => {
 };
 
 export default List;
-
-console.groupCollapsed('ciao');
