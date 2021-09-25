@@ -1,58 +1,51 @@
-#### Tutorial Video
+## Implementation of the practice of projects closely related to the tutorial made by John Smilga on React.
 
-(React Tutorial)[https://youtu.be/iZhV0bILFb0]
+#
 
-#### All Projects
+## The projects I have carried out so far divided by topic:
 
-[Projects Site](https://react-projects.netlify.app/)
-
-## Corresponding Tutorial Topics
-
-#### useState
+#### useState, useEffect and Conditional Rendering
 
 1. Birthday Reminder
-
-#### useEffect and Conditional Rendering
-
 2. Tours
 3. Reviews
 4. Questions
-5. Menu
-6. Tabs
-7. Slider
 
-#### Forms
+## :pushpin: Technologies
 
-8. Lorem Ipsum Generator
-9. Color Shades Generator
-10. Grocery Bud
+The following tools were used in this project:
 
-#### useRef
+- [React](https://reactjs.org/)
+- [Webpack](https://webpack.js.org/)
+- [Javascript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- [HTML](https://html.spec.whatwg.org/multipage/)
+- [CSS](https://www.w3.org/Style/CSS/)
+- [npm](https://docs.npmjs.com/)
+- [Node.js](https://nodejs.org/en/)
 
-11. Navbar
+## :pushpin: Requirements
 
-#### useContext
+Before starting, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
-12. Modal And Sidebar
-13. Stripe Submenus
+## :pushpin: Starting
 
-#### useReducer and useContext
+```bash
+# Clone this project
+$ git clone https://github.com/cavaglieridomenico/react-projects
 
-14. Cart
+# Access
+$ Choose a project and access the setup folder
 
-#### React Router and useCallback
+# Install dependencies
+$ npm install
 
-15. Cocktails
+# Run the project
+$ npm run start
 
-## Advanced Projects (Course Exclusive)
+```
 
-[Course Link](https://www.udemy.com/course/react-tutorial-and-projects-course/?couponCode=REACT-OCT)
+#### Links related to the tutorial:
 
-16. Markdown Preview
-17. Random Person
-18. Pagination
-19. Stock Photos
-20. Dark Mode
-21. Movie DB
-22. Hacker News
-23. Quiz
+- https://youtu.be/iZhV0bILFb0
+- https://github.com/john-smilga/react-projects
+- https://react-projects.netlify.app/
