@@ -23,6 +23,18 @@ function App() {
       console.log(error);
     }
   };
+  if (loading) {
+    return (
+      <main>
+        <Loading />
+      </main>
+    );
+  }
+  return (
+    <main>
+      <Tours toursData={tours} removeTour={removeTour} />
+    </main>
+  );
 }
 
 export default App
