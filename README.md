@@ -1,4 +1,4 @@
-## Implementation of the practice of projects closely related to the tutorial made by John Smilga on React.
+## Implementation of projects closely related to the tutorial made by John Smilga on React.
 
 #
 
