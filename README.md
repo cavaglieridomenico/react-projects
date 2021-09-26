@@ -1,7 +1,5 @@
 ## Implementation of projects closely related to the tutorial made by John Smilga on React.
 
-#
-
 ### The projects I have carried out so far divided by topic:
 
 #### useState, useEffect and Conditional Rendering
