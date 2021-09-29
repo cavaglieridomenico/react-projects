@@ -8,6 +8,25 @@ function App() {
   const [jobsData, setJobsData] = useState([]);
   const [jobValue, setJobValue] = useState(0);
 
+  const fetchData = async () => {
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        setJobsData(data);
+        setLoading(false);
+      } else {
+        throw new Error('Errore!');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   if (loading) {
     return (
       <section className='section loading'>
