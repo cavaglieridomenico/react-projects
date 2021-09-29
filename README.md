@@ -8,6 +8,8 @@
 2. Tours
 3. Reviews
 4. Questions
+5. Menu
+6. Tabs
 
 ## :pushpin: Technologies
 
