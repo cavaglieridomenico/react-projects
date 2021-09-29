@@ -34,6 +34,8 @@ function App() {
       </section>
     );
   }
+  const { title, dates, company, duties } = jobsData[jobValue];
+
   return <h2>tabs project setup</h2>;
 }
 
