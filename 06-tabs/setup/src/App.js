@@ -8,6 +8,13 @@ function App() {
   const [jobsData, setJobsData] = useState([]);
   const [jobValue, setJobValue] = useState(0);
 
+  if (loading) {
+    return (
+      <section className='section loading'>
+        <h1>Loading...</h1>
+      </section>
+    );
+  }
   return <h2>tabs project setup</h2>;
 }
 
