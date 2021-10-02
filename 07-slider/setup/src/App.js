@@ -20,6 +20,12 @@ function App() {
   useEffect(() => {
     setCurrentIndex(checkIndex(currentIndex));
   }, [currentIndex]);
+
+  useEffect(() => {
+    const slideShow = setTimeout(() => setCurrentIndex(currentIndex + 1), 3000);
+    return () => clearInterval(slideShow);
+  }, [currentIndex]);
+
   return (
     <section className='section'>
       <div className='title'>
