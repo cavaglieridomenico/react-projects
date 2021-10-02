@@ -20,6 +20,34 @@ function App() {
   useEffect(() => {
     setCurrentIndex(checkIndex(currentIndex));
   }, [currentIndex]);
+  return (
+    <section className='section'>
+      <div className='title'>
+        <h2>
+          <span>/</span>
+          reviews
+        </h2>
+      </div>
+      <div className='section-center'>
+        <button
+          className='prev'
+          onClick={() => {
+            setCurrentIndex(prevValue => prevValue - 1);
+          }}
+        >
+          <FiChevronLeft />
+        </button>
+        <button
+          className='next'
+          onClick={() => {
+            setCurrentIndex(prevValue => prevValue + 1);
+          }}
+        >
+          <FiChevronRight />
+        </button>
+      </div>
+    </section>
+  );
 }
 
 export default App;
