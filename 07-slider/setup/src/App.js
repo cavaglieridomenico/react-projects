@@ -29,6 +29,30 @@ function App() {
         </h2>
       </div>
       <div className='section-center'>
+        {data.map((el, index) => {
+          const { id, image, name, title, quote } = el;
+          const activeClass = () => {
+            if (index === currentIndex) {
+              return 'activeSlide';
+            }
+            if (
+              index === currentIndex - 1 ||
+              (index === lastNumberOfList && currentIndex === startNumberOfList)
+            ) {
+              return 'lastSlide';
+            }
+            return 'nextSlide';
+          };
+          return (
+            <article className={activeClass()} key={index}>
+              <img src={image} alt={name} className='person-img' />
+              <h4>{name}</h4>
+              <p className='title'>{title}</p>
+              <p className='text'>{quote}</p>
+              <FaQuoteRight className='icon' />
+            </article>
+          );
+        })}
         <button
           className='prev'
           onClick={() => {
