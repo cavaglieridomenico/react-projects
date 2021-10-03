@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import data from './data';
 function App() {
   const [inputNumber, setInputNumber] = useState(0);
   const [text, setText] = useState([]);
-  
+
+  useEffect(() => {
+    if (inputNumber < 0) {
+      setInputNumber(0);
+    }
+    if (inputNumber > data.length) {
+      setInputNumber(data.length);
+    }
+  });
+
   const handleSubmit = event => {
     event.preventDefault();
     let numberOfParagraphs = parseInt(inputNumber);
-    if (numberOfParagraphs < 0) {
-      numberOfParagraphs = 0;
-    }
     setText(data.slice(0, numberOfParagraphs));
   };
-  
+
   return (
     <section className='section-center'>
       <h3>tired of boring lorem ipsum?</h3>
