@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import data from './data';
 function App() {
+  const [inputNumber, setInputNumber] = useState(0);
   
   
   return (
@@ -11,6 +12,10 @@ function App() {
         <input
           type='number'
           id='amount'
+          value={inputNumber}
+          onChange={event => {
+            setInputNumber(event.target.value);
+          }}
         />
         <button
           className='btn'
