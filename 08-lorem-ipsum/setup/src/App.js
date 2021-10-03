@@ -4,6 +4,14 @@ function App() {
   const [inputNumber, setInputNumber] = useState(0);
   const [text, setText] = useState([]);
   
+  const handleSubmit = event => {
+    event.preventDefault();
+    let numberOfParagraphs = parseInt(inputNumber);
+    if (numberOfParagraphs < 0) {
+      numberOfParagraphs = 0;
+    }
+    setText(data.slice(0, numberOfParagraphs));
+  };
   
   return (
     <section className='section-center'>
@@ -21,6 +29,7 @@ function App() {
         <button
           className='btn'
           type='submit'
+          onClick={event => handleSubmit(event)}
         >
           generate
         </button>
