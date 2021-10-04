@@ -18,6 +18,12 @@ function App() {
     }
   };
 
+  const handleSubmit = event => {
+    event.preventDefault();
+    setError(false);
+    getColor(inputText);
+  };
+
   return (
     <>
       <section className='container'>
