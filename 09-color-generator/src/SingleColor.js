@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import rgbToHex from './utils'
+import React, { useState, useEffect } from 'react';
 
-const SingleColor = () => {
-  return <h4>single color</h4>
-}
+const SingleColor = ({ weight, type, hex }) => {
 
-export default SingleColor
+  return (
+    <article
+    >
+    </article>
+  );
+};
+
+export default SingleColor;
