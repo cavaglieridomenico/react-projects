@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
 const SingleColor = ({ weight, type, hex }) => {
+  const [alert, setAlert] = useState(false);
   const hexValue = `#${hex}`;
+
+  const handleClick = () => {
+    setAlert(true);
+    navigator.clipboard.writeText(hexValue);
+  };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setAlert(false), 3000);
+    return () => clearInterval(timeout);
+  }, [alert]);
 
   return (
     <article
