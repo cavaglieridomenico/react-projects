@@ -39,6 +39,9 @@ function App() {
         </form>
       </section>
       <section className='colors'>
+        {list.map((el, index) => {
+          return <SingleColor key={index} {...el} hex={el.hex} />;
+        })}
       </section>
     </>
   );
