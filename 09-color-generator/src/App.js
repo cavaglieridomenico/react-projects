@@ -15,6 +15,9 @@ import Values from 'values.js'
         <form onSubmit={handleSubmit}>
           <input
             type='text'
+            value={inputText}
+            onChange={event => setInputText(event.target.value)}
+            className={`${error ? 'error' : 'null'}`}
           />
           <button className='btn'>submit</button>
         </form>
