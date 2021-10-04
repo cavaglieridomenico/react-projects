@@ -20,7 +20,8 @@
 5. Menu
 6. Tabs
 7. Slider
-8. Lorem-ipsum
+8. Lorem-ipsum generator
+9. Color generator
 
 ## :pushpin: Technologies
 
