@@ -69,6 +69,9 @@ function App() {
               );
             })}
           </div>
+          <button className='clear-btn' onClick={clearList}>
+            clear items
+          </button>
         </div>
       )}
     </section>
