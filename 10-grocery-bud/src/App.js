@@ -21,6 +21,20 @@ function App() {
           </button>
         </div>
       </form>
+      {list.length > 0 && (
+        <div className='grocery-container'>
+          <div className='grocery-list'>
+            {list.map(item => {
+              return (
+                <List
+                  key={item.id.toString()}
+                  {...item}
+                />
+              );
+            })}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
