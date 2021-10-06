@@ -51,6 +51,7 @@ function App() {
             onChange={event => setInputText(event.target.value)}
           />
           <button type='submit' className='submit-btn'>
+            {isEditItem ? 'edit' : 'submit'}
           </button>
         </div>
       </form>
