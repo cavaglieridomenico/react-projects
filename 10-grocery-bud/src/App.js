@@ -9,6 +9,8 @@ import Alert from './Alert'
 function App() {
   const [inputText, setInputText] = useState('');
   const [list, setList] = useState(getLocalStorage());
+  const [isEditItem, setIsEditItem] = useState(false);
+  const [editItemId, setEditItemId] = useState('');
   const [alert, setAlert] = useState({
     show: false,
     type: '',
