@@ -26,6 +26,17 @@ function App() {
       showAlert(true, 'danger', 'please enter value');
     } else if (inputText && isEditItem) {
       showAlert(true, 'success', 'Value changed');
+      setList(
+        list.map(item => {
+          if (item.id === editItemId) {
+            item.text = inputText;
+          }
+          return item;
+        })
+      );
+      setIsEditItem(false);
+      setInputText('');
+      setEditItemId(null);
     } else {
       showAlert(true, 'success', 'item added to the list');
       const item = { id: new Date().getTime().toString(), text: inputText };
