@@ -20,8 +20,12 @@
 5. Menu
 6. Tabs
 7. Slider
+
+#### Forms
+
 8. Lorem-ipsum generator
 9. Color generator
+10. Grocery bud
 
 ## :pushpin: Technologies
 
