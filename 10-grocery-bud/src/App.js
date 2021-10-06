@@ -5,9 +5,18 @@ import Alert from './Alert'
 function App() {
   const [inputText, setInputText] = useState('');
   const [list, setList] = useState(getLocalStorage());
+  const [alert, setAlert] = useState({
+    show: false,
+    type: '',
+    message: '',
+  });
+  const showAlert = (show = false, type = '', message = '') => {
+    setAlert({ show, type, message });
+  };
   return (
     <section className='section-center'>
       <form className='grocery-form' onSubmit={handleSubmit}>
+        {alert.show && <Alert {...alert} removeAlert={showAlert} {...list} />}
         <h3>grocery bud</h3>
         <div className='form-control'>
           <input
