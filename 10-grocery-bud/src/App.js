@@ -2,9 +2,14 @@ import React, { useState, useEffect } from 'react';
 import List from './List';
 import Alert from './Alert';
 
-import React, { useState, useEffect } from 'react'
-import List from './List'
-import Alert from './Alert'
+const getLocalStorage = () => {
+  const list = localStorage.getItem('list');
+  if (list) {
+    return JSON.parse(localStorage.getItem('list'));
+  } else {
+    return [];
+  }
+};
 
 function App() {
   const [inputText, setInputText] = useState('');
@@ -16,6 +21,11 @@ function App() {
     type: '',
     message: '',
   });
+
+  useEffect(() => {
+    window.localStorage.setItem('list', JSON.stringify(list));
+  }, [list]);
+
   const showAlert = (show = false, type = '', message = '') => {
     setAlert({ show, type, message });
   };
