@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from 'react';
+import List from './List';
+import Alert from './Alert';
+
 import React, { useState, useEffect } from 'react'
 import List from './List'
 import Alert from './Alert'
@@ -13,6 +17,17 @@ function App() {
   const showAlert = (show = false, type = '', message = '') => {
     setAlert({ show, type, message });
   };
+
+  const removeItem = id => {
+    showAlert(true, 'danger', 'item removed');
+    setList(list.filter(el => el.id !== id));
+  };
+
+  const clearList = () => {
+    showAlert(true, 'danger', 'empty list');
+    setList([]);
+  };
+
   return (
     <section className='section-center'>
       <form className='grocery-form' onSubmit={handleSubmit}>
