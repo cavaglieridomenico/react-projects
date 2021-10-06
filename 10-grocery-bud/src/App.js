@@ -62,6 +62,8 @@ function App() {
                 <List
                   key={item.id.toString()}
                   {...item}
+                  removeItem={removeItem}
+                  editItem={editItem}
                 />
               );
             })}
