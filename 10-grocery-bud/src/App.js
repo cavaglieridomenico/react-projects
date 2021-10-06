@@ -20,6 +20,19 @@ function App() {
     setAlert({ show, type, message });
   };
 
+  const handleSubmit = event => {
+    event.preventDefault();
+    if (!inputText) {
+      showAlert(true, 'danger', 'please enter value');
+    } else if (inputText && isEditItem) {
+      showAlert(true, 'success', 'Value changed');
+    } else {
+      showAlert(true, 'success', 'item added to the list');
+      const item = { id: new Date().getTime().toString(), text: inputText };
+      setList([...list, item]);
+      setInputText('');
+    }
+  };
 
   const editItem = id => {
     setInputText(list.find(el => el.id === id).text);
