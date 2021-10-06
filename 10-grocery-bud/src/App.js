@@ -20,6 +20,13 @@ function App() {
     setAlert({ show, type, message });
   };
 
+
+  const editItem = id => {
+    setInputText(list.find(el => el.id === id).text);
+    setEditItemId(id);
+    setIsEditItem(true);
+  };
+
   const removeItem = id => {
     showAlert(true, 'danger', 'item removed');
     setList(list.filter(el => el.id !== id));
