@@ -20,38 +20,40 @@ const Navbar = () => {
   };
 
   return (
-    <div className='nav-center'>
-      <div className='nav-header'>
-        <img src={logo} alt='logo' className='logo' />
-        <button className='nav-toggle'>
-          <FaBars onClick={handleClick} />
-        </button>
+    <nav>
+      <div className='nav-center'>
+        <div className='nav-header'>
+          <img src={logo} alt='logo' className='logo' />
+          <button className='nav-toggle'>
+            <FaBars onClick={handleClick} />
+          </button>
+        </div>
+        <div className='links-container' ref={linKsContainer}>
+          {
+            <ul className='links'>
+              {links.map(el => {
+                const { id, url, text } = el;
+                return (
+                  <li key={id}>
+                    <a href={url}>{text}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          }
+        </div>
+        <ul className='social-icons'>
+          {social.map(el => {
+            const { id, url, icon } = el;
+            return (
+              <li key={id}>
+                <a href={url}>{icon}</a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-      <div className='links-container' ref={linKsContainer}>
-        {
-          <ul className='links'>
-            {links.map(el => {
-              const { id, url, text } = el;
-              return (
-                <li key={id}>
-                  <a href={url}>{text}</a>
-                </li>
-              );
-            })}
-          </ul>
-        }
-      </div>
-      <ul className='social-icons'>
-        {social.map(el => {
-          const { id, url, icon } = el;
-          return (
-            <li key={id}>
-              <a href={url}>{icon}</a>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    </nav>
   );
 };
 
