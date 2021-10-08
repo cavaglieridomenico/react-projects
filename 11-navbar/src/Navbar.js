@@ -32,10 +32,11 @@ const Navbar = () => {
       <div className='links-container' ref={linKsContainer}>
         {
           <ul className='links'>
-            {navLinks.map(el => {
+            {links.map(el => {
+              const { id, url, text } = el;
               return (
-                <li key={el.id}>
-                  <a href={el.url}>{el.text}</a>
+                <li key={id}>
+                  <a href={url}>{text}</a>
                 </li>
               );
             })}
@@ -43,10 +44,11 @@ const Navbar = () => {
         }
       </div>
       <ul className='social-icons'>
-        {navSocial.map(el => {
+        {social.map(el => {
+          const { id, url, icon } = el;
           return (
-            <li key={el.id}>
-              <a href={el.url}>{el.icon}</a>
+            <li key={id}>
+              <a href={url}>{icon}</a>
             </li>
           );
         })}
