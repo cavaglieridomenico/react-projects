@@ -5,6 +5,8 @@ import logo from './logo.svg';
 
 const Navbar = () => {
   const [navLinks, setNavLinks] = useState(links);
+  const [navSocial, setNavSocial] = useState(social);
+
   return (
     <>
       <div className='nav-header'>
@@ -23,6 +25,15 @@ const Navbar = () => {
           </ul>
         }
       </div>
+      <ul className='social-icons'>
+        {navSocial.map(el => {
+          return (
+            <li key={el.id}>
+              <a href={el.url}>{el.icon}</a>
+            </li>
+          );
+        })}
+      </ul>
     </>
   );
 };
