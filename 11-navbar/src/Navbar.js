@@ -7,6 +7,8 @@ const Navbar = () => {
   const [navLinks, setNavLinks] = useState(links);
   const [navSocial, setNavSocial] = useState(social);
 
+  const linKsContainer = useRef(null);
+
   return (
     <div className='nav-center'>
       <div className='nav-header'>
@@ -15,7 +17,7 @@ const Navbar = () => {
           <FaBars />
         </button>
       </div>
-      <div className='links-container'>
+      <div className='links-container' ref={linKsContainer}>
         {
           <ul className='links'>
             {navLinks.map(el => {
