@@ -4,8 +4,6 @@ import { links, social } from './data';
 import logo from './logo.svg';
 
 const Navbar = () => {
-  const [navLinks, setNavLinks] = useState(links);
-  const [navSocial, setNavSocial] = useState(social);
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const linKsContainer = useRef(null);
