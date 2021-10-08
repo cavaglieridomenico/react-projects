@@ -11,6 +11,9 @@ const Navbar = () => {
     <div className='nav-center'>
       <div className='nav-header'>
         <img src={logo} alt='logo' className='logo' />
+        <buttom className='nav-toggle'>
+          <FaBars />
+        </buttom>
       </div>
       <div className='links-container'>
         {
