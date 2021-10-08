@@ -6,15 +6,27 @@ import logo from './logo.svg';
 const Navbar = () => {
   const [navLinks, setNavLinks] = useState(links);
   const [navSocial, setNavSocial] = useState(social);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   const linKsContainer = useRef(null);
+  const handleClick = () => {
+    if (!mobileMenu) {
+      linKsContainer.current.style.height = '200px';
+      setMobileMenu(true);
+    }
+
+    if (mobileMenu) {
+      linKsContainer.current.style.height = 0;
+      setMobileMenu(false);
+    }
+  };
 
   return (
     <div className='nav-center'>
       <div className='nav-header'>
         <img src={logo} alt='logo' className='logo' />
         <button className='nav-toggle'>
-          <FaBars />
+          <FaBars onClick={handleClick} />
         </button>
       </div>
       <div className='links-container' ref={linKsContainer}>
