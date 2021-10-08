@@ -3,9 +3,7 @@ import Navbar from './Navbar';
 function App() {
   return (
     <nav>
-      <div className='nav-center'>
-        <Navbar />
-      </div>
+      <Navbar />
     </nav>
   );
 }

@@ -8,7 +8,7 @@ const Navbar = () => {
   const [navSocial, setNavSocial] = useState(social);
 
   return (
-    <>
+    <div className='nav-center'>
       <div className='nav-header'>
         <img src={logo} alt='logo' className='logo' />
       </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };
 
