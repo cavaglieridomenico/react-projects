@@ -6,18 +6,17 @@ import logo from './logo.svg';
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  const linKsContainer = useRef(null);
-  const handleClick = () => {
-    if (!mobileMenu) {
-      linKsContainer.current.style.height = '200px';
-      setMobileMenu(true);
-    }
+  const linKsContainerRef = useRef(null);
+  const linksRef = useRef(null);
 
+  useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
     if (mobileMenu) {
-      linKsContainer.current.style.height = 0;
-      setMobileMenu(false);
+      linKsContainerRef.current.style.height = `${linksHeight}px`;
+    } else {
+      linKsContainerRef.current.style.height = '0px';
     }
-  };
+  }, [mobileMenu]);
 
   return (
     <nav>
@@ -28,9 +27,9 @@ const Navbar = () => {
             <FaBars onClick={() => setMobileMenu(!mobileMenu)} />
           </button>
         </div>
-        <div className='links-container' ref={linKsContainer}>
+        <div className='links-container' ref={linKsContainerRef}>
           {
-            <ul className='links'>
+            <ul className='links' ref={linksRef}>
               {links.map(el => {
                 const { id, url, text } = el;
                 return (
