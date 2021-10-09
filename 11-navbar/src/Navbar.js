@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className='nav-header'>
           <img src={logo} alt='logo' className='logo' />
           <button className='nav-toggle'>
-            <FaBars onClick={handleClick} />
+            <FaBars onClick={() => setMobileMenu(!mobileMenu)} />
           </button>
         </div>
         <div className='links-container' ref={linKsContainer}>
