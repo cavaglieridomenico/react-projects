@@ -54,13 +54,13 @@ Before starting, you need to have [Git](https://git-scm.com) and [Node](https://
 $ git clone https://github.com/cavaglieridomenico/react-projects
 
 # Access
-$ Choose a project and access the setup folder
+$ choose the project and access its folder
 
 # Install dependencies
 $ npm install
 
-# Run the project
-$ npm run start
+# Run the project in dev mode
+$ npm start
 
 ```
 
