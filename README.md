@@ -27,6 +27,10 @@
 9. Color generator
 10. Grocery bud
 
+#### useRef
+
+11. Navbar
+
 ## :pushpin: Technologies
 
 The following tools were used in this project:
