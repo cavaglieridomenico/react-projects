@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from './logo.svg';
 import { FaTimes } from 'react-icons/fa';
 import { social, links } from './data';
+import { GeneralContext } from './context';
 
 const Sidebar = () => {
+  const { showSidebar, handleShowSidebar } = useContext(GeneralContext);
   return (
-    <aside className='sidebar show show-sidebar'>
+    <aside className={`sidebar ${showSidebar && 'show-sidebar'}`}>
       <div className='sidebar-header'>
         <img src={logo} alt='logo' className='logo' />
-        <button className='close-btn'>
+        <button className='close-btn' onClick={handleShowSidebar}>
           <FaTimes />
         </button>
       </div>
