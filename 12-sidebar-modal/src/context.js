@@ -1,3 +1,9 @@
 import React, { useState, useContext } from 'react';
 
-export const AppContext = React.createContext();
+const AppContext = React.createContext();
+
+const AppProvider = () => {
+  return <AppContext.Provider></AppContext.Provider>;
+};
+
+export { AppContext, AppProvider };
