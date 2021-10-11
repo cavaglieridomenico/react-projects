@@ -3,10 +3,10 @@ import { FaBars } from 'react-icons/fa';
 import { GeneralContext } from './context';
 
 const Home = () => {
-  const { handleShowModal } = useContext(GeneralContext);
+  const { handleShowModal, handleShowSidebar } = useContext(GeneralContext);
   return (
     <main>
-      <button className='sidebar-toggle'>
+      <button className='sidebar-toggle' onClick={handleShowSidebar}>
         <FaBars />
       </button>
       <button className='btn' onClick={handleShowModal}>
