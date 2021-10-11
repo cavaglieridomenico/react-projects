@@ -6,6 +6,7 @@ import { GeneralContext } from './context';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const handleShowModal = () => {
     setShowModal(!showModal);
