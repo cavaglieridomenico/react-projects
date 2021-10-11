@@ -15,7 +15,9 @@ function App() {
     setShowSidebar(!showSidebar);
   };
   return (
-    <GeneralContext.Provider value={{ showModal, handleShowModal }}>
+    <GeneralContext.Provider
+      value={{ showModal, handleShowModal, showSidebar, handleShowSidebar }}
+    >
       <Home />
       <Modal />
       <Sidebar />
