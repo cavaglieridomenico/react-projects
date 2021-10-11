@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import Modal from './Modal';
 import Sidebar from './Sidebar';
 import Home from './Home';
-import { GeneralContext } from './context';
+import { AppContext } from './context';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -15,13 +15,13 @@ function App() {
     setShowSidebar(!showSidebar);
   };
   return (
-    <GeneralContext.Provider
+    <AppContext.Provider
       value={{ showModal, handleShowModal, showSidebar, handleShowSidebar }}
     >
       <Home />
       <Modal />
       <Sidebar />
-    </GeneralContext.Provider>
+    </AppContext.Provider>
   );
 }
 

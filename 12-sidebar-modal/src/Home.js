@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { FaBars } from 'react-icons/fa';
-import { GeneralContext } from './context';
+import { AppContext } from './context';
 
 const Home = () => {
-  const { handleShowModal, handleShowSidebar } = useContext(GeneralContext);
+  const { handleShowModal, handleShowSidebar } = useContext(AppContext);
   return (
     <main>
       <button className='sidebar-toggle' onClick={handleShowSidebar}>

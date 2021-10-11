@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { FaTimes } from 'react-icons/fa';
-import { GeneralContext } from './context';
+import { AppContext } from './context';
 
 const Modal = () => {
-  const { showModal, handleShowModal } = useContext(GeneralContext);
+  const { showModal, handleShowModal } = useContext(AppContext);
   return (
     <div className={`modal-overlay ${showModal && 'show-modal'}`}>
       <div className='modal-container'>
