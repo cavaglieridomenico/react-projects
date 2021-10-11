@@ -11,6 +11,9 @@ function App() {
   const handleShowModal = () => {
     setShowModal(!showModal);
   };
+  const handleShowSidebar = () => {
+    setShowSidebar(!showSidebar);
+  };
   return (
     <GeneralContext.Provider value={{ showModal, handleShowModal }}>
       <Home />
