@@ -8,7 +8,6 @@ function App() {
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => {
-    console.log('Ho accesso a showModal');
     setShowModal(!showModal);
   };
   return (
