@@ -6,7 +6,7 @@ import sublinks from './data';
 const Sidebar = () => {
   const { isSidebar } = useGlobalContext();
   return (
-    <div className='sidebar-wrapper'>
+    <div className={`sidebar-wrapper ${isSidebar && 'show'}`}>
       <aside className='sidebar'>
         <button className='close-btn'>
           <FaTimes />
