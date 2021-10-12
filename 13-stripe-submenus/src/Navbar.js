@@ -15,10 +15,10 @@ const Navbar = () => {
           </button>
         </div>
         <ul className='nav-links'>
-          {sublinks.map(sublink => {
+          {sublinks.map((sublink, index) => {
             const { page } = sublink;
             return (
-              <li key={new Date().getTime().toString()}>
+              <li key={index}>
                 <button className='link-btn'>{page}</button>
               </li>
             );
