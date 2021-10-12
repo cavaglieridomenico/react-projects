@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 const AppContext = React.createContext();
 
-const AppProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -22,4 +22,6 @@ const AppProvider = ({ children }) => {
   );
 };
 
-export { AppContext, AppProvider };
+export const useGlobalContex = () => {
+  return useContext(AppContext);
+};

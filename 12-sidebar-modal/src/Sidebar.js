@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import { FaTimes } from 'react-icons/fa';
 import { social, links } from './data';
-import { AppContext } from './context';
+import { useGlobalContex } from './context';
 
 const Sidebar = () => {
-  const { showSidebar, handleShowSidebar } = useContext(AppContext);
+  const { showSidebar, handleShowSidebar } = useGlobalContex();
   return (
     <aside className={`sidebar ${showSidebar && 'show-sidebar'}`}>
       <div className='sidebar-header'>
