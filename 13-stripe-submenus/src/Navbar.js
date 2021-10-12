@@ -9,8 +9,8 @@ const Navbar = () => {
     <nav className='nav'>
       <div className='nav-center'>
         <div className='nav-header'>
-          <img src={logo} alt='logo' className='nav' />
-          <button className='btn toggle-btn'>
+          <img src={logo} alt='logo' className='nav-logo' />
+          <button className='btn toggle-btn' onClick={openSidebar}>
             <FaBars />
           </button>
         </div>
