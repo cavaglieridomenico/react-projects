@@ -4,11 +4,11 @@ import { useGlobalContext } from './context';
 import sublinks from './data';
 
 const Sidebar = () => {
-  const { isSidebar } = useGlobalContext();
+  const { isSidebar, closeSidebar } = useGlobalContext();
   return (
     <div className={`sidebar-wrapper ${isSidebar && 'show'}`}>
       <aside className='sidebar'>
-        <button className='close-btn'>
+        <button className='close-btn' onClick={closeSidebar}>
           <FaTimes />
         </button>
         <div className='sidebar-links'>
