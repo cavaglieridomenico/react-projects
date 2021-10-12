@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from './images/logo.svg';
 import { FaBars } from 'react-icons/fa';
+import { useGlobalContext } from './context';
 
 const Navbar = () => {
+  const { sublinks } = useGlobalContext();
   return (
     <nav className='nav'>
       <div className='nav-center'>
@@ -12,7 +14,16 @@ const Navbar = () => {
             <FaBars />
           </button>
         </div>
-        <ul className='nav-links'></ul>
+        <ul className='nav-links'>
+          {sublinks.map(sublink => {
+            const { page } = sublink;
+            return (
+              <li key={new Date().getTime().toString()}>
+                <button className='link-btn'>{page}</button>
+              </li>
+            );
+          })}
+        </ul>
         <button className='btn'>sign in</button>
       </div>
     </nav>
