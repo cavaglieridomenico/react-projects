@@ -8,8 +8,13 @@ export const AppProvider = ({ children }) => {
   const openSidebar = () => {
     setIsSidebar(true);
   };
+  const closeSidebar = () => {
+    setIsSidebar(false);
+  };
   return (
-    <AppContext.Provider value={{ sublinks, isSidebar, openSidebar }}>
+    <AppContext.Provider
+      value={{ sublinks, isSidebar, openSidebar, closeSidebar }}
+    >
       {children}
     </AppContext.Provider>
   );
