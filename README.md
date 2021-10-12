@@ -31,6 +31,10 @@
 
 11. Navbar
 
+#### useContex
+
+12. Modal And Sidebar
+
 ## :pushpin: Technologies
 
 The following tools were used in this project:
