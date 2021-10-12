@@ -1,7 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react';
 
 const Submenu = () => {
-  return <h2>submenu component</h2>
-}
+  return (
+    <aside className='submenu'>
+      <section>
+        <h4></h4>
+        <div className='submenu-center'>
+          <a href=''></a>
+        </div>
+      </section>
+    </aside>
+  );
+};
 
-export default Submenu
+export default Submenu;
