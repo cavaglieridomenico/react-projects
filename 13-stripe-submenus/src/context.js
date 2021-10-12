@@ -5,6 +5,9 @@ const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
   const [isSidebar, setIsSidebar] = useState(false);
+  const openSidebar = () => {
+    setIsSidebar(!isSidebar);
+  };
   return (
     <AppContext.Provider value={{ sublinks }}>{children}</AppContext.Provider>
   );
