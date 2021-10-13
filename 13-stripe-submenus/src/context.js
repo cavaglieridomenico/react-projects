@@ -18,7 +18,10 @@ export const AppProvider = ({ children }) => {
   const handleMouseEnterLinks = (event, index) => {
     setLinkElement(event.target);
     setSubmenuItems(sublinks[index]);
-    setSubmenuCol(sublinks[index].links.length);
+    setSubmenuCol(prevVale => {
+      const numberOfColumn = sublinks[index].links.length;
+      return numberOfColumn > 4 ? 3 : numberOfColumn;
+    });
     setIsSubmenu(true);
   };
   const handleMouseLeave = () => {
