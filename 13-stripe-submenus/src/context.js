@@ -29,7 +29,19 @@ export const AppProvider = ({ children }) => {
   };
   return (
     <AppContext.Provider
-      value={{ sublinks, isSidebar, openSidebar, closeSidebar }}
+      value={{
+        sublinks,
+        isSidebar,
+        openSidebar,
+        closeSidebar,
+        handleMouseEnterLinks,
+        handleMouseLeave,
+        submenuItems,
+        submenuCol,
+        isSubmenu,
+        handleMouseEnterSubmenu,
+        linkElement,
+      }}
     >
       {children}
     </AppContext.Provider>
