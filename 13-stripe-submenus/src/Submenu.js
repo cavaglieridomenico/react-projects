@@ -13,6 +13,13 @@ const Submenu = () => {
   } = useGlobalContext();
   const { page, links } = submenuItems;
   const [submenuPosition, setSubmenuPosition] = useState(0);
+  useEffect(() => {
+    if (isSubmenu) {
+      const position = linkElement.getBoundingClientRect();
+      setSubmenuPosition(position.right - position.width / 2);
+    }
+  }, [isSubmenu]);
+
   return (
     <aside className={`submenu ${!isSidebar && 'show'}`}>
       <section>
