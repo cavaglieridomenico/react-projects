@@ -15,6 +15,9 @@ export const AppProvider = ({ children }) => {
   const closeSidebar = () => {
     setIsSidebar(false);
   };
+  const handleMouseLeave = () => {
+    setIsSubmenu(false);
+  };
   return (
     <AppContext.Provider
       value={{ sublinks, isSidebar, openSidebar, closeSidebar }}
