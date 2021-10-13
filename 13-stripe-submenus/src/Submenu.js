@@ -2,10 +2,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useGlobalContext } from './context';
 
 const Submenu = () => {
-  const { isSidebar, sublinks } = useGlobalContext();
-  const [submenuIndex, setSubmenuIndex] = useState(2);
-  const [submenuItems, setSubmenuItems] = useState(sublinks[submenuIndex]);
-  const [submenuCol, setSubmenuCol] = useState(submenuItems.links.length);
+  const {
+    isSidebar,
+    submenuItems,
+    submenuCol,
+    isSubmenu,
+    handleMouseEnterSubmenu,
+    handleMouseLeave,
+    linkElement,
+  } = useGlobalContext();
   const { page, links } = submenuItems;
   return (
     <aside className={`submenu ${!isSidebar && 'show'}`}>
