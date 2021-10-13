@@ -24,7 +24,7 @@ export const AppProvider = ({ children }) => {
     });
     setIsSubmenu(true);
   };
-  const handleMouseLeave = () => {
+  const handleMouseOut = () => {
     setIsSubmenu(false);
   };
   const handleMouseEnterSubmenu = () => {
@@ -38,7 +38,7 @@ export const AppProvider = ({ children }) => {
         openSidebar,
         closeSidebar,
         handleMouseEnterLinks,
-        handleMouseLeave,
+        handleMouseOut,
         submenuItems,
         submenuCol,
         isSubmenu,

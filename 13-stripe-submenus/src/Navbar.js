@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import { useGlobalContext } from './context';
 
 const Navbar = () => {
-  const { sublinks, openSidebar, handleMouseEnterLinks, handleMouseLeave } =
+  const { sublinks, openSidebar, handleMouseEnterLinks, handleMouseOut } =
     useGlobalContext();
 
   return (
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <button
                   className='link-btn'
                   onMouseOver={event => handleMouseEnterLinks(event, index)}
-                  onMouseOut={handleMouseLeave}
+                  onMouseOut={handleMouseOut}
                 >
                   {page}
                 </button>

@@ -8,7 +8,7 @@ const Submenu = () => {
     submenuCol,
     isSubmenu,
     handleMouseEnterSubmenu,
-    handleMouseLeave,
+    handleMouseOut,
     linkElement,
   } = useGlobalContext();
   const { page, links } = submenuItems;
@@ -23,8 +23,8 @@ const Submenu = () => {
   return (
     <aside
       className={`submenu ${!isSidebar && isSubmenu && 'show'}`}
-      onMouseEnter={handleMouseEnterSubmenu}
-      onMouseLeave={handleMouseLeave}
+      onMouseOver={handleMouseEnterSubmenu}
+      onMouseOut={handleMouseOut}
       style={{ left: `${submenuPosition}px` }}
     >
       <section>
