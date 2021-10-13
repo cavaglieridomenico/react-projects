@@ -21,7 +21,13 @@ const Navbar = () => {
             const { page } = sublink;
             return (
               <li key={index}>
-                <button className='link-btn'>{page}</button>
+                <button
+                  className='link-btn'
+                  onMouseOver={event => handleMouseEnterLinks(event, index)}
+                  onMouseOut={handleMouseLeave}
+                >
+                  {page}
+                </button>
               </li>
             );
           })}
