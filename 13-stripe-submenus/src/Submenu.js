@@ -23,7 +23,8 @@ const Submenu = () => {
   return (
     <aside
       className={`submenu ${!isSidebar && isSubmenu && 'show'}`}
-    <aside className={`submenu ${!isSidebar && 'show'}`}>
+      onMouseEnter={handleMouseEnterSubmenu}
+      onMouseLeave={handleMouseLeave}
       <section>
         <h4>{page}</h4>
         <div className={`submenu-center col-${submenuCol}`}>
