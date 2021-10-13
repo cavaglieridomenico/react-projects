@@ -23,8 +23,9 @@ export const AppProvider = ({ children }) => {
     }
   };
 
-const AppProvider = ({ children }) => {
-  const [cart, setCart] = useState(cartItems)
+  useEffect(() => {
+    fetchItems();
+  }, []);
 
   return (
     <AppContext.Provider
