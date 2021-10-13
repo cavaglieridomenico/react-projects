@@ -15,6 +15,12 @@ export const AppProvider = ({ children }) => {
   const closeSidebar = () => {
     setIsSidebar(false);
   };
+  const handleMouseEnterLinks = (event, index) => {
+    setLinkElement(event.target);
+    setSubmenuItems(sublinks[index]);
+    setSubmenuCol(sublinks[index].links.length);
+    setIsSubmenu(true);
+  };
   const handleMouseLeave = () => {
     setIsSubmenu(false);
   };
