@@ -12,6 +12,7 @@ const Submenu = () => {
     linkElement,
   } = useGlobalContext();
   const { page, links } = submenuItems;
+  const [submenuPosition, setSubmenuPosition] = useState(0);
   return (
     <aside className={`submenu ${!isSidebar && 'show'}`}>
       <section>
