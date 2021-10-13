@@ -21,6 +21,8 @@ const Submenu = () => {
   }, [isSubmenu]);
 
   return (
+    <aside
+      className={`submenu ${!isSidebar && isSubmenu && 'show'}`}
     <aside className={`submenu ${!isSidebar && 'show'}`}>
       <section>
         <h4>{page}</h4>
