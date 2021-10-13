@@ -25,6 +25,8 @@ const Submenu = () => {
       className={`submenu ${!isSidebar && isSubmenu && 'show'}`}
       onMouseEnter={handleMouseEnterSubmenu}
       onMouseLeave={handleMouseLeave}
+      style={{ left: `${submenuPosition}px` }}
+    >
       <section>
         <h4>{page}</h4>
         <div className={`submenu-center col-${submenuCol}`}>
