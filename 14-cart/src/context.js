@@ -18,7 +18,7 @@ export const AppProvider = ({ children }) => {
     try {
       if (fetchResponse.ok) {
         const fetchData = await fetchResponse.json();
-        dispatch({ type: 'ADD_CART', payload: fetchData });
+        dispatch({ type: 'UPDATE_CART', payload: fetchData });
         setLoading(false);
       } else {
         throw new Error('Data not available at the moment...');
@@ -39,7 +39,8 @@ export const AppProvider = ({ children }) => {
       }
       return el;
     });
-    dispatch({ type: 'INCREASE', payload: newCart });
+    dispatch({ type: 'UPDATE_CART', payload: newCart });
+  };
   };
 
   return (
