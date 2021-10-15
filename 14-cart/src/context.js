@@ -4,9 +4,14 @@ import reducer from './reducer';
 const url = 'https://course-api.com/react-useReducer-cart-project';
 const AppContext = React.createContext();
 
+const defaultState = {
+  cart: [],
+  total: (0).toFixed(2),
+};
+
 export const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [cart, setCart] = useState([]);
+  const [state, dispatch] = useReducer(reducer, defaultState);
 
   const fetchItems = async () => {
     const fetchResponse = await fetch(url);
