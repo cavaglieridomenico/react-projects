@@ -32,11 +32,22 @@ export const AppProvider = ({ children }) => {
     fetchItems();
   }, []);
 
+  const handleIncrease = (id, state) => {
+    const newCart = state.cart.map(el => {
+      if (el.id === id) {
+        el.amount++;
+      }
+      return el;
+    });
+    dispatch({ type: 'INCREASE', payload: newCart });
+  };
+
   return (
     <AppContext.Provider
       value={{
         state,
         loading,
+        handleIncrease,
       }}
     >
       {children}
