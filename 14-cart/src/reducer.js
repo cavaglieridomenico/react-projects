@@ -1,13 +1,5 @@
 const reducer = (state, action) => {
-  if (action.type === 'ADD_CART') {
-    const newCart = action.payload;
-    return {
-      ...state,
-      cart: newCart,
-    };
-  }
-  if (action.type === 'INCREASE') {
-    const id = action.payload;
+  if (action.type === 'UPDATE_CART') {
     const newCart = action.payload;
     return {
       ...state,
