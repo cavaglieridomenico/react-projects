@@ -18,7 +18,7 @@ export const AppProvider = ({ children }) => {
     try {
       if (fetchResponse.ok) {
         const fetchData = await fetchResponse.json();
-        setCart(fetchData);
+        dispatch({ type: 'ADD_CART', payload: fetchData });
         setLoading(false);
       } else {
         throw new Error('Data not available at the moment...');
