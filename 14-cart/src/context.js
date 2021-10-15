@@ -41,6 +41,17 @@ export const AppProvider = ({ children }) => {
     });
     dispatch({ type: 'UPDATE_CART', payload: newCart });
   };
+
+  const handleDecrease = (id, state) => {
+    const newCart = state.cart.filter(el => {
+      if (el.id === id && el.amount === 1) {
+        return el.id !== id;
+      } else if (el.id === id) {
+        el.amount--;
+      }
+      return el;
+    });
+    dispatch({ type: 'UPDATE_CART', payload: newCart });
   };
 
   return (
@@ -49,6 +60,7 @@ export const AppProvider = ({ children }) => {
         state,
         loading,
         handleIncrease,
+        handleDecrease,
       }}
     >
       {children}
