@@ -4,6 +4,9 @@ const reducer = (state, action) => {
     return {
       ...state,
       cart: newCart,
+      quantity: newCart.reduce((acc, el) => {
+        return acc + el.amount;
+      }, 0),
     };
   }
   throw new Error('no action with that name!');
