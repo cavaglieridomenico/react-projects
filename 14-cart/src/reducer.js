@@ -12,6 +12,13 @@ const reducer = (state, action) => {
       }, 0),
     };
   }
+  if (action.type === 'REMOVE_ITEMS') {
+    return {
+      ...state,
+      cart: [],
+      quantity: 0,
+    };
+  }
   throw new Error('no action with that name!');
 };
 
