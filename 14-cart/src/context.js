@@ -55,6 +55,11 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: 'UPDATE_CART', payload: newCart });
   };
 
+  const handleRemoveItem = (id, state) => {
+    const newCart = state.cart.filter(el => el.id !== id);
+    dispatch({ type: 'UPDATE_CART', payload: newCart });
+  };
+
   const handleRemoveItems = () => {
     dispatch({ type: 'REMOVE_ITEMS' });
   };
@@ -66,6 +71,7 @@ export const AppProvider = ({ children }) => {
         loading,
         handleIncrease,
         handleDecrease,
+        handleRemoveItem,
         handleRemoveItems,
       }}
     >
