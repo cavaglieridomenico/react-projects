@@ -8,7 +8,9 @@ const reducer = (state, action) => {
         return acc + el.amount;
       }, 0),
       total: newCart.reduce((acc, el) => {
-        return acc + parseFloat(el.price);
+        const sum = acc + parseFloat(el.price) * el.amount;
+        const fixedSum = sum.toFixed(2);
+        return parseFloat(fixedSum);
       }, 0),
     };
   }
