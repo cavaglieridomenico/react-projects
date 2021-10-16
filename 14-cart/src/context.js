@@ -55,6 +55,10 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: 'UPDATE_CART', payload: newCart });
   };
 
+  const handleRemoveItems = () => {
+    dispatch({ type: 'REMOVE_ITEMS' });
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -62,6 +66,7 @@ export const AppProvider = ({ children }) => {
         loading,
         handleIncrease,
         handleDecrease,
+        handleRemoveItems,
       }}
     >
       {children}
