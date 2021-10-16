@@ -6,6 +6,7 @@ const AppContext = React.createContext();
 
 const defaultState = {
   cart: [],
+  quantity: 0,
   total: (0).toFixed(2),
 };
 
