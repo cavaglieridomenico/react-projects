@@ -7,6 +7,9 @@ const reducer = (state, action) => {
       quantity: newCart.reduce((acc, el) => {
         return acc + el.amount;
       }, 0),
+      total: newCart.reduce((acc, el) => {
+        return acc + parseFloat(el.price);
+      }, 0),
     };
   }
   throw new Error('no action with that name!');
