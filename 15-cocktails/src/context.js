@@ -6,7 +6,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setsearchTerm] = useState('a');
+  const [searchTerm, setSearchTerm] = useState('a');
   const [cocktails, setCocktails] = useState([]);
 
   const fetchDrinks = async () => {
@@ -50,7 +50,7 @@ const AppProvider = ({ children }) => {
       value={{
         loading,
         cocktails,
-        setsearchTerm,
+        setSearchTerm,
       }}
     >
       {children}
