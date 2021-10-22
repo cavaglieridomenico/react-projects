@@ -16,14 +16,24 @@ const AppProvider = ({ children }) => {
       if (response.ok) {
         const data = await response.json();
         const { drinks } = data;
-        console.log(drinks);
         if (drinks) {
           setCocktails(drinks);
-          setLoading(false);
+          const newCocktails = drinks.map(item => {
+            const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } =
+              item;
+            return {
+              id: idDrink,
+              name: strDrink,
+              image: strDrinkThumb,
+              info: strAlcoholic,
+              glass: strGlass,
+            };
+          });
+          setCocktails(newCocktails);
         } else {
           setCocktails([]);
-          setLoading(false);
         }
+        setLoading(false);
       }
     } catch (error) {
       console.log(error);
