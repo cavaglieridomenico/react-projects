@@ -8,6 +8,7 @@
 - Corrections needed
 - Commit of all the logical steps of the project implementation
 - Some of the solutions are personal and alternative to those of the tutorial
+- The most interesting projects have a deployment on Netlify
 
 ### The projects I have carried out so far divided by topic:
 
@@ -34,7 +35,7 @@
 #### useContex
 
 12. Modal And Sidebar
-13. Stripe Menus
+13. [Stripe Menus](https://cavaglieridomenico-stripe-submenus.netlify.app/)
 
 #### useReducer and useContext
 
@@ -74,6 +75,9 @@ $ npm install
 
 # Run the project in dev mode
 $ npm start
+
+# Build the project
+$ npm run build
 
 ```
 
