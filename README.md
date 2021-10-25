@@ -38,11 +38,11 @@
 
 #### useReducer and useContext
 
-14. Cart
+14. [Cart](https://cavaglieridomenico-cart.netlify.app/)
 
 #### React Router and useCallback
 
-15. Cocktails
+15. [Cocktails](https://cavaglieridomenico-cocktails.netlify.app/)
 
 ## :pushpin: Technologies
 
