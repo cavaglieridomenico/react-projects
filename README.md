@@ -36,6 +36,14 @@
 12. Modal And Sidebar
 13. Stripe Menus
 
+#### useReducer and useContext
+
+14. Cart
+
+#### React Router and useCallback
+
+15. Cocktails
+
 ## :pushpin: Technologies
 
 The following tools were used in this project:
